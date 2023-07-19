@@ -1,0 +1,28 @@
+:root {
+  --time-grid-block-width: 23px;
+  --time-grid-block-height: 45px;
+  --time-grid-block-button-width: 8px;
+  --time-grid-block-button-height: 8px;
+  --hover-time-grid-block-button-width: 15px;
+  --hover-time-grid-block-button-height: 15px;
+}
+.container_div {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: left;
+}
+.line_div {
+  z-index: 2;
+  width: 0.5px;
+  height: var(--time-grid-block-height);
+  background-color: gainsboro;
+}
+.half_line_div {
+  z-index: 2;
+  width: 0.5px;
+  height: calc(var(--time-grid-block-height) * 0.5);
+  background-color: gainsboro;
+}

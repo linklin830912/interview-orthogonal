@@ -1,0 +1,80 @@
+:root {
+  --time-grid-block-width: 23px;
+  --time-grid-block-height: 45px;
+  --time-grid-block-button-width: 8px;
+  --time-grid-block-button-height: 8px;
+  --hover-time-grid-block-button-width: 15px;
+  --hover-time-grid-block-button-height: 15px;
+}
+.container_div,
+.is_selected_container_div {
+  width: var(--time-grid-block-width);
+  height: var(--time-grid-block-height);
+  margin: 10px 0;
+  background-color: ghostwhite;
+  position: relative;
+}
+.is_selected_container_div {
+  background-color: orangered;
+  cursor: grab;
+}
+.start_div {
+  position: absolute;
+  top: -18px;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+}
+
+.start_div .start_h6 {
+  user-select: none;
+  margin: 0;
+}
+
+.end_div {
+  position: absolute;
+  top: -18px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+}
+.end_div .end_h6 {
+  user-select: none;
+  margin: 0;
+}
+
+.start_button,
+.end_button {
+  z-index: 2;
+  border: solid 2px orangered;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: var(--time-grid-block-button-width);
+  height: var(--time-grid-block-button-height);
+  border-radius: 50%;
+  top: calc(
+    var(--time-grid-block-height) * 0.5 - var(--time-grid-block-button-height) *
+      0.5
+  );
+  cursor: pointer;
+}
+.start_button:hover,
+.end_button:hover {
+  transform: scale(2);
+}
+
+.start_button {
+  left: calc(var(--time-grid-block-button-width) * -0.5);
+}
+.end_button {
+  left: calc(
+    var(--time-grid-block-button-width) * -0.5 + var(--time-grid-block-width)
+  );
+}
+
+h6 {
+  font-size: 0.5rem;
+  color: lightgray;
+  font-weight: lighter;
+}
